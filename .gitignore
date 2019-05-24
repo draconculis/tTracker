@@ -1,0 +1,18 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# WebStorm settings
+*/.idea/workspace.xml
+/script/IdeServerAdmin/bin/
+/script/IdeServerAdmin/obj/
+/script/IdeServerAdmin/IdeServerAdmin.csproj.user
+/.vs/
+/SharedPackages
+/src/IdeServer/bin/
+/src/IdeServer/obj/
+/src/IdeServer/wwwroot/
+/test/IdeServerTest/obj/
+/test/IdeServerTest/bin/
+*.lock.json
+**/*.user
+*.db
+thirdparty/packages
