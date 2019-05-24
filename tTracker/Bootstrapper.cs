@@ -4,7 +4,6 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.Reflection;
 using BeijerElectronics.CommonSystemServices.IO;
-using BeijerElectronics.PackageBuilder.PackageBuilder;
 
 namespace BeijerElectronics.PackageBuilder.Tool
 {
