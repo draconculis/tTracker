@@ -1,18 +1,38 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+*.suo
+**/bin
+**/obj
+**/Bin
+**/Obj
+*.cri
+*.ref
+**.csproj.user
+_ReSharper.*
+*.ReSharper.user
+*.orig
+*.vsp
+*.psess
+output/help/*
+**.TeamCity.user
+**/StyleCop.Cache
+**/UpgradeLog*.XML
+**.cs.rej
+**.DotSettings.user
+*.vspscc
+Documentation/CoDeSys/AutomationPlatform.chw
+Setup/PortalSetup/Generated/Plugins.wxs
+Setup/PortalSetup/Generated/Devices.wxs
+Output/Debug/*
+**/BuildFiles
+**/Temp
+*.opt
+Setup/PortalSetup/Generated/*
+Output/Release/*
+**.user
+.vs
+3rd party/packages/*
+Portal.Core.BuildResults.txt
+PackageFeed/Portal.Core*
+*ObfuscationResults.txt
 
-# WebStorm settings
-*/.idea/workspace.xml
-/script/IdeServerAdmin/bin/
-/script/IdeServerAdmin/obj/
-/script/IdeServerAdmin/IdeServerAdmin.csproj.user
-/.vs/
-/SharedPackages
-/src/IdeServer/bin/
-/src/IdeServer/obj/
-/src/IdeServer/wwwroot/
-/test/IdeServerTest/obj/
-/test/IdeServerTest/bin/
-*.lock.json
-**/*.user
-*.db
-thirdparty/packages
+Portal/Obfuscation/portalDebug.babel
+.sonarqube/
