@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:tTracker"
+        xmlns:DekUserControls="clr-namespace:Dek.Wpf.UserControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="1160" FontFamily="Times New Roman"
         WindowStyle="None"
@@ -19,10 +20,14 @@
             </Grid.RowDefinitions>
 
             <StackPanel Orientation="Horizontal" Grid.Row="1">
+                <DekUserControls:TextBoxWithLabel x:Name="TimeFrom" Width="200" 
+                                                  Text="08:00" LabelText="From" 
+                                                  />
                 <Button Width="50" FontSize="30">≡</Button>
                 <StackPanel Orientation="Vertical">
                     <Label Content="From" HorizontalAlignment="Left" Padding="0" Margin="0,0,0,0" VerticalAlignment="Top" Height="17" />
-                    <TextBox Name="Textbox_TimeFrom" HorizontalAlignment="Left" Height="20" Margin="0,0,0,0" TextWrapping="Wrap" Text="08:00" VerticalAlignment="Top" Width="50" TextChanged="TimeCalculator_TextChanged" />
+                    <TextBox Name="Textbox_TimeFrom" HorizontalAlignment="Left" Height="20" Margin="0,0,0,0" TextWrapping="Wrap" Text="08:00" VerticalAlignment="Top" Width="50" 
+                             TextChanged="TimeCalculator_TextChanged" />
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="To" HorizontalAlignment="Left" Padding="0" Margin="0,0,0,0" VerticalAlignment="Top" Height="17" />
