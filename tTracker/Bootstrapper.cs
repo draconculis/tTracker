@@ -4,7 +4,6 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.Reflection;
 using BeijerElectronics.CommonSystemServices.IO;
-using BeijerElectronics.PackageBuilder.PackageBuilder;
 
 namespace BeijerElectronics.PackageBuilder.Tool
 {
@@ -41,7 +40,6 @@ namespace BeijerElectronics.PackageBuilder.Tool
             new[]
             {
                 Assembly.GetExecutingAssembly(),           // Add Program assembly
-                typeof(IPackageBuilder).Assembly,          // Add PackageBuilder assembly
                 typeof(IFileService).Assembly,             // Add CommonSystemServices assembly
             };
 

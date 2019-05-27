@@ -18,9 +18,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BeijerElectronics.CommonSystemServices.Registry;
-using BeijerElectronics.PackageBuilder.Common;
-using BeijerElectronics.PackageBuilder.IO;
-using BeijerElectronics.PackageBuilder.PackageBuilder;
 using BeijerElectronics.PackageBuilder.Tool;
 
 namespace tTracker
@@ -61,8 +58,6 @@ namespace tTracker
         {
             using (var bootstrapper = new Bootstrapper())
             {
-                var test = bootstrapper.GetExport<IInstalledSoftwareService>();
-                var ver = test.GetFileVersion(@"C:\\DOS\\NUGET.EXE");
             }
         }
 
