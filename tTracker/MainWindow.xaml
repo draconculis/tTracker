@@ -23,7 +23,8 @@
                 <DekUserControls:TextBoxWithLabel x:Name="TimeFrom" Width="200" 
                                                   Text="08:00" LabelText="From" 
                                                   />
-                <Button Width="50" FontSize="30">≡</Button>
+                <Button Width="50" FontSize="30 pt">≡</Button>
+                <DekUserControls:ProjectButton Width="50" DisabledImage="Images/star0.png" NormalImage="Images/star512.png"></DekUserControls:ProjectButton>
                 <StackPanel Orientation="Vertical">
                     <Label Content="From" HorizontalAlignment="Left" Padding="0" Margin="0,0,0,0" VerticalAlignment="Top" Height="17" />
                     <TextBox Name="Textbox_TimeFrom" HorizontalAlignment="Left" Height="20" Margin="0,0,0,0" TextWrapping="Wrap" Text="08:00" VerticalAlignment="Top" Width="50" 
@@ -53,6 +54,10 @@
                     <Label Content="Sum" HorizontalAlignment="Left" Padding="0" Margin="0,0,0,0" VerticalAlignment="Top" Height="17" FontWeight="Bold"/>
                     <TextBox Name="Textbox_Result" HorizontalAlignment="Left" Height="21" Margin="0,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="50" IsReadOnlyCaretVisible="True"/>
                 </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Sum hours" HorizontalAlignment="Left" Padding="0" Margin="0,0,0,0" VerticalAlignment="Top" Height="17" FontWeight="Bold"/>
+                    <TextBox Name="Textbox_ResultHours" HorizontalAlignment="Left" Height="21" Margin="0,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="50" IsReadOnlyCaretVisible="True"/>
+                </StackPanel>
             </StackPanel>
 
             <!-- Button list -->
@@ -62,9 +67,26 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition Width="40"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Margin="0" FontSize="25" Command="{Binding Path=MinimizeLeftCommand}"> >◄</Button>
-                <Button Grid.Column="2" Margin="0" FontSize="25" Command="{Binding Path=MinimizeRightCommand}">►</Button>
-            </Grid>
+                <Button Grid.Column="0" Margin="0" FontSize="25 pt" Command="{Binding Path=MinimizeLeftCommand}">◄</Button>
+                <Button Grid.Column="2" Margin="0" FontSize="25 pt" Command="{Binding Path=MinimizeRightCommand}">►</Button>
+
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+
+
+                </Grid>
+                </Grid>
         </Grid>
 
     </Grid>
