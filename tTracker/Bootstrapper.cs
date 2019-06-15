@@ -16,10 +16,10 @@ namespace BeijerElectronics.PackageBuilder.Tool
             m_Container = CreateContainer();
         }
 
-        public T GetExport<T>() where T : class
-        {
-            return m_Container.GetExportedValue<T>();
-        }
+        //public T GetExport<T>() where T : class
+        //{
+        //    //return m_Container.GetExportedValue<T>();
+        //}
 
         private CompositionContainer CreateContainer()
         {
@@ -40,8 +40,6 @@ namespace BeijerElectronics.PackageBuilder.Tool
             new[]
             {
                 Assembly.GetExecutingAssembly(),           // Add Program assembly
-                typeof(IPackageBuilder).Assembly,          // Add PackageBuilder assembly
-                typeof(IFileService).Assembly,             // Add CommonSystemServices assembly
             };
 
         public void Dispose()
