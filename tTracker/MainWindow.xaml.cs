@@ -18,9 +18,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BeijerElectronics.CommonSystemServices.Registry;
-using BeijerElectronics.PackageBuilder.Common;
-using BeijerElectronics.PackageBuilder.IO;
-using BeijerElectronics.PackageBuilder.PackageBuilder;
 using BeijerElectronics.PackageBuilder.Tool;
 
 namespace tTracker
@@ -61,8 +58,6 @@ namespace tTracker
         {
             using (var bootstrapper = new Bootstrapper())
             {
-                var test = bootstrapper.GetExport<IInstalledSoftwareService>();
-                var ver = test.GetFileVersion(@"C:\\DOS\\NUGET.EXE");
             }
         }
 
@@ -74,9 +69,15 @@ namespace tTracker
 
             TimeSpan res = CalculateTime();
             if(!Error(res))
+            {
                 Textbox_Result.Text = res.ToString(@"hh\:mm");
+                Textbox_ResultHours.Text = res.ToString(@"hh") + "." + ((int.Parse(res.ToString(@"mm")) * 100 / 60).ToString().PadLeft(2, '0'));
+            }
             else
+            {
                 Textbox_Result.Text = "---";
+                Textbox_ResultHours.Text = "---";
+            }
         }
 
         public TimeSpan CalculateTime()
@@ -167,7 +168,7 @@ namespace tTracker
                 if (text.Length == 3)
                     text = "0" + text[0] + ":" + text.Substring(1);
                 else
-                    text = text.Substring(0, 1) + ":" + text.Substring(2);
+                    text = text.Substring(0, 2) + ":" + text.Substring(2);
             }
             else
             {

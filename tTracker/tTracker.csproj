@@ -38,9 +38,6 @@
     <Reference Include="CommonSystemServices, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonSystemServices.1.0.10\lib\netstandard2.0\CommonSystemServices.dll</HintPath>
     </Reference>
-    <Reference Include="PackageBuilder, Version=1.3.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PackageBuilder.1.3.7\lib\netstandard2.0\PackageBuilder.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
     <Reference Include="System.Data" />
@@ -71,12 +68,22 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Controls\TextboxWithLabel.xaml.cs">
+      <DependentUpon>TextboxWithLabel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Controls\ProjectButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\ProjectButton.xaml.cs">
+      <DependentUpon>ProjectButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -103,5 +110,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+<<<<<<< HEAD
+=======
+  <ItemGroup>
+    <Resource Include="Images\star512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\star0.png" />
+  </ItemGroup>
+>>>>>>> aff3b38d2d33b5e512fa5c5b1235feabe9a5a76a
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
