@@ -82,8 +82,15 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    
-
+                    <DekUserControls:ProjectButton Grid.Column="0"/>
+                    <DekUserControls:ProjectButton Grid.Column="1"/>
+                    <DekUserControls:ProjectButton Grid.Column="2"/>
+                    <DekUserControls:ProjectButton Grid.Column="3"/>
+                    <DekUserControls:ProjectButton Grid.Column="4"/>
+                    <DekUserControls:ProjectButton Grid.Column="5"/>
+                    <DekUserControls:ProjectButton Grid.Column="6"/>
+                    <DekUserControls:ProjectButton Grid.Column="7"/>
+                    <DekUserControls:ProjectButton Grid.Column="8"/>
 
                 </Grid>
                 </Grid>
