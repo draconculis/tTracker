@@ -23,7 +23,30 @@ namespace Dek.Wpf.UserControls
         public ProjectButton()
         {
             InitializeComponent();
+            BitmapImage enabledStar = new BitmapImage();
+            enabledStar.BeginInit();
+            enabledStar.UriSource = new Uri("pack://application:,,,/tTracker;tTracker/Resources/EnabledStar.png");
+            enabledStar.EndInit();
+            NormalImage = enabledStar;
+            BitmapImage disabledStar = new BitmapImage();
+            disabledStar.BeginInit();
+            disabledStar.UriSource = new Uri("pack://application:,,,/tTracker;tTracker/Resources/DisabledStar.png");
+            disabledStar.EndInit();
+            DisabledImage = disabledStar;
         }
+
+        public string ProjectName
+        {
+            get => (string)GetValue(ProjectNameProperty);
+            set => SetValue(ProjectNameProperty, value);
+        }
+        public const string NoProjectName = "---";
+        public static readonly DependencyProperty ProjectNameProperty =
+            DependencyProperty.Register("ProjectName", 
+                typeof(string), 
+                typeof(ProjectButton), 
+                new UIPropertyMetadata(NoProjectName));
+
 
         public ImageSource DisabledImage
         {
@@ -31,7 +54,10 @@ namespace Dek.Wpf.UserControls
             set { SetValue(DisabledImageProperty, value); }
         }
         public static readonly DependencyProperty DisabledImageProperty =
-            DependencyProperty.Register("DisabledImage", typeof(ImageSource), typeof(ProjectButton), new UIPropertyMetadata(null));
+            DependencyProperty.Register("DisabledImage", 
+                typeof(ImageSource), 
+                typeof(ProjectButton), 
+                new UIPropertyMetadata());
 
         public ImageSource NormalImage
         {
@@ -39,7 +65,10 @@ namespace Dek.Wpf.UserControls
             set { SetValue(NormalImageProperty, value); }
         }
         public static readonly DependencyProperty NormalImageProperty =
-            DependencyProperty.Register("NormalImage", typeof(ImageSource), typeof(ProjectButton), new UIPropertyMetadata(null));
+            DependencyProperty.Register("NormalImage", 
+                typeof(ImageSource), 
+                typeof(ProjectButton), 
+                new UIPropertyMetadata(null));
 
         public event RoutedEventHandler Click;
 
