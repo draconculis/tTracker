@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Dek.Wpf.UserControls"
              mc:Ignorable="d" 
+             x:Name="uc"
              d:DesignHeight="44" d:DesignWidth="500">
     <Grid>
         <Grid.RowDefinitions>
@@ -14,14 +15,10 @@
         <Border Margin="0" BorderThickness="1" BorderBrush="Black" Grid.RowSpan="2" />
         <Label Grid.Row="0"
                FontSize="12" FontWeight="Bold"  Margin="2,0,3,0"
-               Content="{Binding RelativeSource={RelativeSource FindAncestor, 
-                               AncestorType={x:Type local:TextBoxWithLabel}}, 
-                               Path=LabelText}"/>
+               Content="{Binding Path=LabelText, ElementName=uc}"/>
         <TextBox Grid.Row="1"
                  FontSize="16" BorderThickness="0" BorderBrush="Transparent" Background="Transparent" 
                  Margin="2,0,3,0" 
-                 Text="{Binding RelativeSource={RelativeSource FindAncestor, 
-                               AncestorType={x:Type local:TextBoxWithLabel}}, 
-                               Path=Text}" />
+                 Text="{Binding Path=Text, ElementName=uc}" />
     </Grid>
 </UserControl>

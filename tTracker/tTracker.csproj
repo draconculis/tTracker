@@ -59,6 +59,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\TextboxWithLabel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,6 +75,7 @@
     <Compile Include="Controls\TextboxWithLabel.xaml.cs">
       <DependentUpon>TextboxWithLabel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TextboxWithLabelViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -110,14 +115,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-<<<<<<< HEAD
-=======
   <ItemGroup>
     <Resource Include="Images\star512.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\star0.png" />
   </ItemGroup>
->>>>>>> aff3b38d2d33b5e512fa5c5b1235feabe9a5a76a
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -20,36 +20,32 @@ namespace Dek.Wpf.UserControls
     /// </summary>
     public partial class TextBoxWithLabel : UserControl
     {
+        TextboxWithLabelViewModel model;
+
         public TextBoxWithLabel()
         {
+            model = new TextboxWithLabelViewModel();
             InitializeComponent();
         }
 
-        public static readonly DependencyProperty TextProperty =
-            DependencyProperty.Register(
-                "Text", typeof(string), typeof(TextBoxWithLabel),
-                new FrameworkPropertyMetadata("", 
-                    new PropertyChangedCallback(OnTextChanged),
-                    new CoerceValueCallback(CoerceTextValue)));
+        //public static readonly DependencyProperty TextProperty =
+        //    DependencyProperty.Register(
+        //        "Text", 
+        //        typeof(string), 
+        //        typeof(TextBoxWithLabel),
+        //        new FrameworkPropertyMetadata("Label", 
+        //            new PropertyChangedCallback(OnTextChanged),
+        //            new CoerceValueCallback(CoerceTextValue)));
 
-        public static readonly DependencyProperty LabelTextProperty =
-            DependencyProperty.Register(
-                "LabelText", typeof(string), typeof(TextBoxWithLabel),
-                new FrameworkPropertyMetadata("", 
-                    new PropertyChangedCallback(OnLabelTextChanged),
-                    new CoerceValueCallback(CoerceLabelTextValue)));
+        //public static readonly DependencyProperty LabelTextProperty =
+        //    DependencyProperty.Register(
+        //        "LabelText", 
+        //        typeof(string), 
+        //        typeof(TextBoxWithLabel),
+        //        new FrameworkPropertyMetadata("", 
+        //            new PropertyChangedCallback(OnLabelTextChanged),
+        //            new CoerceValueCallback(CoerceLabelTextValue)));
 
-        public string Text
-        {
-            get => (string) GetValue(TextProperty);
-            set => SetValue(TextProperty, value);
-        }
-
-        public string LabelText
-        {
-            get => (string)GetValue(LabelTextProperty);
-            set => SetValue(LabelTextProperty, value);
-        }
 
         private static void OnTextChanged(DependencyObject obj, DependencyPropertyChangedEventArgs args)
         {

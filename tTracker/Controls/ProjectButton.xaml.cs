@@ -25,21 +25,39 @@ namespace Dek.Wpf.UserControls
             InitializeComponent();
         }
 
+        public static string TitleNotSet = "---";
+        public string ProjectTitle
+        {
+            get { return (string)GetValue(ProjectTitleProperty); }
+            set { SetValue(ProjectTitleProperty, value); }
+        }
+        public static readonly DependencyProperty ProjectTitleProperty =
+            DependencyProperty.Register("ProjectTitleImage",
+                typeof(string),
+                typeof(ProjectButton),
+                new UIPropertyMetadata(TitleNotSet));
+
         public ImageSource DisabledImage
         {
             get { return (ImageSource)GetValue(DisabledImageProperty); }
             set { SetValue(DisabledImageProperty, value); }
         }
         public static readonly DependencyProperty DisabledImageProperty =
-            DependencyProperty.Register("DisabledImage", typeof(ImageSource), typeof(ProjectButton), new UIPropertyMetadata(null));
+            DependencyProperty.Register("DisabledImage",
+                typeof(ImageSource),
+                typeof(ProjectButton),
+                new UIPropertyMetadata(null));
 
-        public ImageSource NormalImage
+        public ImageSource EnabledImage
         {
-            get { return (ImageSource)GetValue(NormalImageProperty); }
-            set { SetValue(NormalImageProperty, value); }
+            get { return (ImageSource)GetValue(EnabledImageProperty); }
+            set { SetValue(EnabledImageProperty, value); }
         }
-        public static readonly DependencyProperty NormalImageProperty =
-            DependencyProperty.Register("NormalImage", typeof(ImageSource), typeof(ProjectButton), new UIPropertyMetadata(null));
+        public static readonly DependencyProperty EnabledImageProperty =
+            DependencyProperty.Register("EnabledImage", 
+                typeof(ImageSource), 
+                typeof(ProjectButton), 
+                new UIPropertyMetadata(null));
 
         public event RoutedEventHandler Click;
 
