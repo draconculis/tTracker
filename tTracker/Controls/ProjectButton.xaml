@@ -4,7 +4,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             x:Name="Uc"
              mc:Ignorable="d" 
+<<<<<<< HEAD
              x:Name="uc"
              d:DesignHeight="128" d:DesignWidth="160">
   <Grid>
@@ -76,6 +78,90 @@
         </ControlTemplate>
       </Button.Template>
     </Button>
+=======
+             d:DesignHeight="128" d:DesignWidth="160">
+    <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <!--<Button Grid.Row="0" Grid.Column="8" 
+                Grid.RowSpan="2" Grid.ColumnSpan="2"  Background="Transparent">
+            <Image Source="../Images/star0.png" Opacity="1" />
+        </Button>
+
+        <Button Grid.Row="2" Grid.Column="8"  
+                Grid.RowSpan="2" Grid.ColumnSpan="2"  Background="Transparent">
+            <Image Source="../Images/star0.png" Opacity="1" />
+        </Button>-->
+
+        <Label 
+            FontSize="21px" 
+            FontWeight="Bold"
+            VerticalAlignment="Center" HorizontalAlignment="Center"
+            Grid.Row="1" Grid.Column="0" 
+            Grid.RowSpan="3" Grid.ColumnSpan="8" Content="{Binding ProjectName, ElementName=Uc}" />
+
+        <Button Grid.Row="0" Grid.Column="8" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                Background="Transparent"  FontWeight="Black">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="buttonBorder">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.0" />
+                        </Border.Effect>
+                        <Border.Child>
+                            <Image Name="img" Source="{Binding NormalImage, ElementName=Uc}"/>
+                        </Border.Child>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="buttonBorder" Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect Opacity="0.8" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseCaptured" Value="true">
+                            <Setter TargetName="buttonBorder" Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect Opacity="0.8" Direction="135"  
+                                                      ShadowDepth="3" BlurRadius="1" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter TargetName="img" Property="Source" Value="{Binding DisabledImage, ElementName=Uc}"/>
+                            <Setter TargetName="buttonBorder" Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect Opacity="0.0"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+>>>>>>> 50a11074f6a35f11a398358acded203f3578ffe2
 
 
   </Grid>

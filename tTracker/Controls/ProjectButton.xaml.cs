@@ -23,8 +23,19 @@ namespace Dek.Wpf.UserControls
         public ProjectButton()
         {
             InitializeComponent();
+            BitmapImage enabledStar = new BitmapImage();
+            enabledStar.BeginInit();
+            enabledStar.UriSource = new Uri("pack://application:,,,/tTracker;tTracker/Resources/EnabledStar.png");
+            enabledStar.EndInit();
+            NormalImage = enabledStar;
+            BitmapImage disabledStar = new BitmapImage();
+            disabledStar.BeginInit();
+            disabledStar.UriSource = new Uri("pack://application:,,,/tTracker;tTracker/Resources/DisabledStar.png");
+            disabledStar.EndInit();
+            DisabledImage = disabledStar;
         }
 
+<<<<<<< HEAD
         public static string TitleNotSet = "---";
         public string ProjectTitle
         {
@@ -36,6 +47,20 @@ namespace Dek.Wpf.UserControls
                 typeof(string),
                 typeof(ProjectButton),
                 new UIPropertyMetadata(TitleNotSet));
+=======
+        public string ProjectName
+        {
+            get => (string)GetValue(ProjectNameProperty);
+            set => SetValue(ProjectNameProperty, value);
+        }
+        public const string NoProjectName = "---";
+        public static readonly DependencyProperty ProjectNameProperty =
+            DependencyProperty.Register("ProjectName", 
+                typeof(string), 
+                typeof(ProjectButton), 
+                new UIPropertyMetadata(NoProjectName));
+
+>>>>>>> 50a11074f6a35f11a398358acded203f3578ffe2
 
         public ImageSource DisabledImage
         {
@@ -43,18 +68,30 @@ namespace Dek.Wpf.UserControls
             set { SetValue(DisabledImageProperty, value); }
         }
         public static readonly DependencyProperty DisabledImageProperty =
+<<<<<<< HEAD
             DependencyProperty.Register("DisabledImage",
                 typeof(ImageSource),
                 typeof(ProjectButton),
                 new UIPropertyMetadata(null));
+=======
+            DependencyProperty.Register("DisabledImage", 
+                typeof(ImageSource), 
+                typeof(ProjectButton), 
+                new UIPropertyMetadata());
+>>>>>>> 50a11074f6a35f11a398358acded203f3578ffe2
 
         public ImageSource EnabledImage
         {
             get { return (ImageSource)GetValue(EnabledImageProperty); }
             set { SetValue(EnabledImageProperty, value); }
         }
+<<<<<<< HEAD
         public static readonly DependencyProperty EnabledImageProperty =
             DependencyProperty.Register("EnabledImage", 
+=======
+        public static readonly DependencyProperty NormalImageProperty =
+            DependencyProperty.Register("NormalImage", 
+>>>>>>> 50a11074f6a35f11a398358acded203f3578ffe2
                 typeof(ImageSource), 
                 typeof(ProjectButton), 
                 new UIPropertyMetadata(null));

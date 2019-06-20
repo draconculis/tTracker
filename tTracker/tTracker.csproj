@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -121,5 +122,11 @@
   <ItemGroup>
     <Resource Include="Images\star0.png" />
   </ItemGroup>
+<<<<<<< HEAD
+=======
+  <ItemGroup>
+    <None Include="Resources\NormalImgResource.png" />
+  </ItemGroup>
+>>>>>>> 50a11074f6a35f11a398358acded203f3578ffe2
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
